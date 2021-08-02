@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\ProductoController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,8 +23,8 @@ Route::get('/', function () {
 // })->name('dashboard');
 
 
-Route::middleware(['auth,sanctum','verified'])->group(function(){
-    Route::resource('/productos', ProductosController::class);
+Route::middleware(['auth:sanctum','verified'])->group(function(){
+    Route::resource('/productos', App\Http\Controllers\ProductoController::class);
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');

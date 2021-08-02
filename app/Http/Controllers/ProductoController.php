@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use app\Models\Producto;
 class ProductoController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        return view('productos.index');
     }
 
     /**
